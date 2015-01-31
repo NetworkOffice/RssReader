@@ -10,3 +10,15 @@ E:\VBProject\RSS_Reader\RSS_Reader\obj\x86\Debug\RSS_Reader.pdb
 E:\VBProject\RSS_Reader\RSS_Reader\bin\Debug\Interop.MSXML2.dll
 E:\VBProject\RSS_Reader\RSS_Reader\obj\x86\Debug\Interop.MSXML2.dll
 E:\VBProject\RSS_Reader\RSS_Reader\obj\x86\Debug\RSS_Reader.vbproj.ResolveComReference.cache
+E:\VBProject\RSS_Reader2\RSS_Reader\obj\x86\Debug\Interop.MSXML2.dll
+E:\VBProject\RSS_Reader2\RSS_Reader\obj\x86\Debug\RSS_Reader.vbproj.ResolveComReference.cache
+E:\VBProject\RSS_Reader2\RSS_Reader\obj\x86\Debug\RSS_Reader.exe
+E:\VBProject\RSS_Reader2\RSS_Reader\obj\x86\Debug\RSS_Reader.xml
+E:\VBProject\RSS_Reader2\RSS_Reader\obj\x86\Debug\RSS_Reader.pdb
+E:\VBProject\RSS_Reader2\RSS_Reader\bin\Debug\RSS_Reader.exe
+E:\VBProject\RSS_Reader2\RSS_Reader\bin\Debug\RSS_Reader.pdb
+E:\VBProject\RSS_Reader2\RSS_Reader\bin\Debug\RSS_Reader.xml
+E:\VBProject\RSS_Reader2\RSS_Reader\bin\Debug\Interop.MSXML2.dll
+E:\VBProject\RSS_Reader2\RSS_Reader\obj\x86\Debug\RSS_Reader.Form1.resources
+E:\VBProject\RSS_Reader2\RSS_Reader\obj\x86\Debug\RSS_Reader.Resources.resources
+E:\VBProject\RSS_Reader2\RSS_Reader\obj\x86\Debug\RSS_Reader.vbproj.GenerateResource.Cache

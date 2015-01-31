@@ -10,28 +10,44 @@
             rss = New RssItem()
             Dim rssCh As RSSChannel
             rssCh = New RSSChannel(tRssAddress.Text)
-            rssCh.GetChannelInfo()
-            Label2.Text = rssCh.m_Title
-            Label3.Text = rssCh.m_Description
-            LinkLabel3.Text = rssCh.m_Link
-            arr = rssCh.GetChannelItems()
-            For Each Me.aa In arr
-                ListBox1.Items.Add(aa.m_Title)
-            Next
+            'rssCh.GetChannelInfo()
+            If Not rssCh.m_Error Then
+                Label2.Visible = True
+                Label3.Visible = True
+                LinkLabel3.Visible = True
+                Label2.Text = rssCh.m_Title
+                Label3.Text = rssCh.m_Description
+                LinkLabel3.Text = rssCh.m_Link
+                arr = rssCh.GetChannelItems()
+                For Each Me.aa In arr
+                    ListBox1.Items.Add(aa.m_Title)
+                Next
+            End If
         End If
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
+        LinkLabel1.Visible = True
         Dim i As Integer = ListBox1.SelectedIndex
         aa = arr.Item(i)
         LinkLabel1.Text = aa.m_link
-        'WebBrowser1.Refresh()
-        'WebBrowser1.Document.clear()
         WebBrowser1.Document.Body.InnerHtml = aa.m_Description
     End Sub
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Label2.Visible = False
+        Label3.Visible = False
+        LinkLabel1.Visible = False
+        LinkLabel3.Visible = False
         WebBrowser1.Navigate("about:blank")
+    End Sub
+
+    Private Sub LinkLabel1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles LinkLabel1.Click
+        Shell("C:\Program Files\Internet Explorer\iexplore.exe" + " " + LinkLabel1.Text, AppWinStyle.NormalFocus)
+    End Sub
+
+    Private Sub LinkLabel3_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles LinkLabel3.Click
+        Shell("C:\Program Files\Internet Explorer\iexplore.exe" + " " + LinkLabel3.Text, AppWinStyle.NormalFocus)
     End Sub
 End Class
 Class RssItem
@@ -49,12 +65,19 @@ Class RSSChannel
     Public m_Title As String
     Public m_Link As String
     Public m_Description As String
+    Public m_Error As Boolean
     Public Sub New(ByVal url As String)
-        m_FeedURL = url
         m_Title = ""
         m_Link = ""
         m_Description = ""
-        GetChannelInfo()
+        If CheckRSSUrlAvailable(url) Then
+            m_Error = False
+            m_FeedURL = url
+            GetChannelInfo()
+        Else
+            MsgBox("Thr URL that you type is not available")
+            m_Error = True
+        End If
     End Sub
     Public Sub GetChannelInfo()
         Dim rss As Xml.XmlNodeList = GetXMLDoc("rss/channel")
@@ -87,5 +110,14 @@ Class RSSChannel
         Next
 
         Return tempArrayList
+    End Function
+    Public Function CheckRSSUrlAvailable(ByVal Url As String) As Boolean
+        Dim request As System.Net.WebRequest
+        Try
+            request = System.Net.WebRequest.Create(Url)
+        Catch ex As Exception
+            Return False
+        End Try
+        Return True
     End Function
 End Class
