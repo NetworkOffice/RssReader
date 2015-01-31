@@ -22,3 +22,8 @@ E:\VBProject\RSS_Reader2\RSS_Reader\bin\Debug\Interop.MSXML2.dll
 E:\VBProject\RSS_Reader2\RSS_Reader\obj\x86\Debug\RSS_Reader.Form1.resources
 E:\VBProject\RSS_Reader2\RSS_Reader\obj\x86\Debug\RSS_Reader.Resources.resources
 E:\VBProject\RSS_Reader2\RSS_Reader\obj\x86\Debug\RSS_Reader.vbproj.GenerateResource.Cache
+C:\Users\xg\Documents\GitHub\RssReader\RSS_Reader\obj\x86\Debug\Interop.MSXML2.dll
+C:\Users\xg\Documents\GitHub\RssReader\RSS_Reader\obj\x86\Debug\RSS_Reader.vbproj.ResolveComReference.cache
+C:\Users\xg\Documents\GitHub\RssReader\RSS_Reader\obj\x86\Debug\RSS_Reader.exe
+C:\Users\xg\Documents\GitHub\RssReader\RSS_Reader\obj\x86\Debug\RSS_Reader.xml
+C:\Users\xg\Documents\GitHub\RssReader\RSS_Reader\obj\x86\Debug\RSS_Reader.pdb
